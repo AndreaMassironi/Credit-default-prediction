@@ -23,3 +23,7 @@ df = pd.get_dummies(df, drop_first=True, dtype=int)
 
 print("\nShape after encoding:", df.shape)
 print(df.head())
+
+os.makedirs("data", exist_ok=True)
+df.to_csv("data/clean.csv", index=False)
+print("Saved data/clean.csv")
